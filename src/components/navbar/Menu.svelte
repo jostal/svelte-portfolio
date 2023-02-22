@@ -17,7 +17,7 @@
   <div>
     {#each links as link, i}
       <p transition:fly = {{ y: -15, delay: 50 * i }}>
-        <a href={link.href}>{link.name}</a>
+        <a on:click={() => open = false} href={link.href}>{link.name}</a>
       </p>
     {/each}
   </div>
