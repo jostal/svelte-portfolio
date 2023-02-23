@@ -15,20 +15,22 @@
 
 <main>
   <div id="wrapper">
-    <h1>Joseph Talon</h1>
-    <div id="profile">
-      <img src="https://cdn.josephtalon.ca/images%2FMyself%2FOptimized-profile.jpg" width="100%" alt="Joseph Talon" /> 
-    </div>
-    <div id="bio">
-      <p>I am a full-stack developer based in Guelph, Ontario. I love working on making user-friendly and accessible applications so all users can enjoy a pleasant experience. Focusing on these aspects of development also has the benefit of providing excellent search engine optimization so websites and applications I work on can rank well on search engines.</p>
+    <div id="profile-container">
+      <h1>Joseph Talon</h1>
+      <div id="profile">
+        <img src="https://cdn.josephtalon.ca/images%2FMyself%2FOptimized-profile.jpg" width="100%" alt="Joseph Talon" /> 
+      </div>
+      <div id="bio">
+        <p>I am a full-stack developer based in Guelph, Ontario. I love working on making user-friendly and accessible applications so all users can enjoy a pleasant experience. Focusing on these aspects of development also has the benefit of providing excellent search engine optimization so websites and applications I work on can rank well on search engines.</p>
 
-      <p>
-        I have worked on many projects, both personal and professional which has left me very skilled in turning ideas into reality. It has also given me valuable experience with many technologies, abling me to select the best tools for the job. 
-      </p>
+        <p>
+          I have worked on many projects, both personal and professional which has left me very skilled in turning ideas into reality. It has also given me valuable experience with many technologies, abling me to select the best tools for the job. 
+        </p>
 
-      <p>
-        I particularly enjoy working with web technologies. The existing web technologies make creating accessible applications a breeze leaving more energy to focus on other aspects of the application.
-      </p>
+        <p>
+          I particularly enjoy working with web technologies. The existing web technologies make creating accessible applications a breeze leaving more energy to focus on other aspects of the application.
+        </p>
+      </div>
     </div>
 
     <div id="tech">
@@ -59,9 +61,25 @@
 
   @media only screen and (min-width: 800px) {
     #wrapper {
-        min-width: 500px;
-        max-width: 530px;
-        width: 40%;
+      position: relative;
+      display: grid;
+      grid-template-areas: 
+        "profile tech";
+      grid-template-columns: 50% 50%;
+    }
+
+    #profile-container {
+      grid-area: profile;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #tech {
+      grid-area: tech;
+      position: absolute;
+      top: 0.5em;
+      left: 50%;
     }
   }
 
