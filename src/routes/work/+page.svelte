@@ -1,5 +1,9 @@
 <script>
+  //import { RenderHTML } from "svelte-render-md";
+
   export let data;
+
+  console.log(data);
 </script>
 
 <svelte:head>
@@ -24,6 +28,7 @@
     {/each}
   </section>
   <section id="projects">
+    <h1>Projects</h1>
 
   </section>
 </main>
@@ -31,12 +36,13 @@
 <style>
   main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
   h1 {
     text-align: center;
   }
-
   #experience {
     width: 80%;
   }
@@ -47,25 +53,24 @@
       "icon name name"
       ". dates .";
   }
-
   .experience > img {
     grid-area: icon;
     width: 2em;
     align-self: center;
   }
-
   .experience > strong {
     grid-area: name;
     align-self: start;
     margin-left: 0.5em;
   }
-
   .experience > em {
     grid-area: dates;
     margin-left: 0.5em
   }
-
   .responsibilities {
     grid-area: responsibilities;
+  }
+  .responsibilities > li {
+    margin-bottom: 1em;
   }
 </style>

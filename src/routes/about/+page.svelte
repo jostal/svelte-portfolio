@@ -87,6 +87,12 @@
     text-align: center;
   }
 
+  #profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   #profile {
     max-width: 300px;
     max-height: 300px;
