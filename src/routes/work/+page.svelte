@@ -51,11 +51,21 @@
     justify-content: center;
     align-items: center;
   }
+
+  @media only screen and (min-width: 800px) {
+    main {
+      display: grid;
+      grid-template-areas: 
+        "xp proj";
+    }
+  }
   h1 {
     text-align: center;
   }
   #experience {
     width: 80%;
+    grid-area: xp;
+    justify-self: center;
   }
   .experience {
     width: 100%;
@@ -63,11 +73,13 @@
     grid-template-areas: 
       "icon name name"
       ". dates .";
+    justify-content: start;
   }
   .experience > img {
     grid-area: icon;
     width: 2em;
     align-self: center;
+    justify-self: end;
   }
   .experience > strong {
     grid-area: name;
@@ -79,6 +91,7 @@
     margin-left: 0.5em
   }
   .responsibilities {
+    width: 80%;
     grid-area: responsibilities;
   }
   .responsibilities > li {
@@ -87,13 +100,15 @@
 
   #projects {
     width: 80%; 
+    grid-area: proj;
+    justify-self: center;
   }
 
   .project-preview {
     background-color: #764831;  
     padding: 1em;
     border-radius: 1em;
-    cursor: hover;
+    cursor: pointer;
     display: grid;
     grid-template-areas: 
       "title ."
