@@ -114,6 +114,7 @@
       "title ."
       "desc ."
       "tech arrow";
+    margin-bottom: 1em;
   }
 
   .project-preview:hover {

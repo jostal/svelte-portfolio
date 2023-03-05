@@ -78,7 +78,7 @@
     #tech {
       grid-area: tech;
       position: absolute;
-      top: 0.5em;
+      top: 30%;
       left: 50%;
     }
   }
