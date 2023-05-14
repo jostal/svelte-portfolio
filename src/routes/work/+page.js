@@ -8,12 +8,13 @@ export async function load({ fetch }) {
     .then((response) => response.json());
 
   let projects = [];
-  Array.from(projectFiles).forEach(async (filename) => {
+
+  for (const filename of projectFiles) {
     let path = '/work/projects/' + filename.file;
     let content = await fetch(path)
       .then((response) => response.text());
     projects.push(parseContent(content));
-  })
+  }
 
   return {
     experience: xp,

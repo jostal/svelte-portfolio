@@ -28,7 +28,12 @@
     <h1>Projects</h1>
     {#each data.projects as proj}
       <div on:click={() => goto(`/work/${proj.frontmatter.name}`)} key={proj.frontmatter.name} class="project-preview">
-        <h2>{proj.frontmatter.name}</h2>
+        <div class="projHeader">
+          {#if proj.frontmatter.icon}
+            <img src={proj.frontmatter.icon} alt="Project Icon" />
+          {/if}
+          <h2>{proj.frontmatter.name}</h2>
+        </div>
         <p>{proj.frontmatter.description}</p>
         <ul>
           {#each proj.frontmatter.tech as t}
@@ -115,6 +120,16 @@
       "desc ."
       "tech arrow";
     margin-bottom: 1em;
+  }
+
+  .projHeader {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .projHeader > img {
+    width: 2em;
+    height: 2em;
   }
 
   .project-preview:hover {

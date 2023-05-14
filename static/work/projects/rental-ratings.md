@@ -1,6 +1,7 @@
 ---
 name: "Rental Ratings"
 description: "A place to leave and view reviews on landlords and rental properties"
+git: "https://github.com/jostal/rental-ratings"
 tech: 
   - name: "NextJS"
     icon: "https://cdn.josephtalon.ca/images%2Fportfolio%2Ficons%2Fnextjs.png"
@@ -10,11 +11,7 @@ tech:
     icon: "https://cdn.josephtalon.ca/images%2Fportfolio%2Ficons%2Fpostgresql.png"
 ---
 # Rental Ratings
-Rental Ratings is a platform for tenants to leave and view reviews on landlords and rental properties. Users can search by either landlord or address.
-## Tech Stack
-- Fastify
-- NextJS
-- PostgreSQL
+**Github**: [https://github.com/jostal/rental-ratings](https://github.com/jostal/rental-ratings)
 
 NextJS was used to develop the frontend, while FastifyJS was used to develop an API to interface with the relational database created on Supabase using PostgreSQL.
 ## Homepage
