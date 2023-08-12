@@ -2,5 +2,9 @@
   {
     "file": "cratis.md",
     "name": "Cratis"
+  },
+  {
+    "file": "dashboard.md",
+    "name": "Dashboard"
   }
 ]
